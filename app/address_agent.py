@@ -34,7 +34,7 @@ def validate_address(address, city, state):
         return None, None, None
 
 
-def run_address_validation(limit=5):
+def run_address_validation(limit=11):
     """
     Takes a few providers, validates their addresses,
     and prints the standardized results.
@@ -66,4 +66,4 @@ def run_address_validation(limit=5):
 
 
 if __name__ == "__main__":
-    run_address_validation(5)
+    run_address_validation(11)

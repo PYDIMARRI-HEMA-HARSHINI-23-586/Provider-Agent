@@ -29,7 +29,7 @@ def fetch_npi_data(first_name, last_name):
         return None
 
 
-def validate_providers(limit=5):
+def validate_providers(limit=11):
     """
     Pulls a few providers from the DB and tries to fetch NPI data.
     Updates the DB with found NPI numbers and confidence scores.
@@ -76,4 +76,4 @@ def validate_providers(limit=5):
 
 
 if __name__ == "__main__":
-    validate_providers(5)
+    validate_providers(11)
