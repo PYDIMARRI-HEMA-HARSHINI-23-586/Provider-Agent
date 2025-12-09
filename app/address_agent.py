@@ -48,8 +48,15 @@ def run_address_validation(limit=5):
             full_address, lat, lon = validate_address(p.address, p.city, p.state)
 
             if full_address:
-                print(f"✅ Valid address found: {full_address}")
+                confidence = 0.9 if p.city.lower() in full_address.lower() else 0.7
+                print(f"✅ Valid address found: {full_address} | Confidence: {confidence:.2f}")
                 print(f"   🌐 Coordinates: ({lat}, {lon})")
+
+                # optionally store in DB
+                p.address_confidence = confidence
+                p.validation_status = "validated" if confidence >= 0.8 else "review"
+                session.commit()
+
             else:
                 print(f"❌ Could not validate address for {p.full_name}")
 
