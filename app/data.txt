@@ -1,0 +1,10 @@
+{
+        "full_name": "Dr. SARAH ELISABETH JOHNSON M.D.",
+        "phone": "773-751-7850",
+        "email": "sarah.johnson@example.com",
+        "address": "1300 WEST DEVON AVE",
+        "city": "Chicago",
+        "state": "IL",
+        "specialty": "Multi-Specialty Clinic / Hospital",
+        "license_number": "N/A",
+}
