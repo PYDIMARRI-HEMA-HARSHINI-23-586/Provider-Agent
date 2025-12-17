@@ -1,3 +1,6 @@
 pandas
 SQLAlchemy
 Faker
+streamlit
+requests
+streamlit-autorefresh
